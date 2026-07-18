@@ -1,0 +1,1 @@
+Menual is a fast desktop application launcher built with Python and Textual.

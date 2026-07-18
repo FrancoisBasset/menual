@@ -1,0 +1,5 @@
+pkg
+dist
+uv.lock
+*.zst
+__pycache__
