@@ -1,16 +1,37 @@
 [project]
 name = "menual"
 version = "0.0.1"
-description = "Menual is a fast desktop application launcher built with Python and Textual."
+description = "A fast, colorful desktop application launcher built with Python and Textual."
 authors = [
     { name = "FrancoisBasset", email = "mrfrancoisbasset@gmail.com" },
 ]
 license = "MIT"
 readme = "README.md"
 requires-python = ">=3.14"
+keywords = [
+    "application-launcher",
+    "hyprland",
+    "kitty",
+    "linux",
+    "textual",
+    "tui",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Desktop Environment",
+]
 dependencies = [
     "textual>=8.2.8",
 ]
+
+[project.urls]
+Homepage = "https://github.com/FrancoisBasset/menual"
+Repository = "https://github.com/FrancoisBasset/menual"
+Issues = "https://github.com/FrancoisBasset/menual/issues"
 
 [project.scripts]
 menual = "menual.main:main"
@@ -22,8 +43,18 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/menual"]
 
+[tool.basedpyright]
+typeCheckingMode = "basic"
+pythonVersion = "3.14"
+include = ["src", "tests"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
 [dependency-groups]
 dev = [
     "basedpyright>=1.39.9",
+    "pytest",
     "ruff>=0.15.20",
 ]

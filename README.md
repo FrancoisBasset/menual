@@ -9,6 +9,7 @@
 </p>
 
 <p align="center">
+  <img alt="CI status" src="https://github.com/FrancoisBasset/menual/actions/workflows/ci.yml/badge.svg">
   <img alt="Python 3.14+" src="https://img.shields.io/badge/Python-3.14%2B-3776AB?logo=python&logoColor=white">
   <img alt="Textual 8.2.8+" src="https://img.shields.io/badge/Textual-8.2.8%2B-FF2D55">
   <img alt="Kitty" src="https://img.shields.io/badge/Terminal-Kitty-6EAA5E?logo=linux&logoColor=white">
@@ -21,6 +22,14 @@
 Menual turns a tiny configuration file into a clean application grid. Open it, choose an entry, and get out of the way — no search index, daemon or heavyweight desktop integration required.
 
 It is designed for Linux users who want a minimal launcher that still has some personality.
+
+## Screenshot
+
+<p align="center">
+  <img src="assets/menual-screenshot.svg" alt="Menual running in a Kitty terminal window with six colorful launcher buttons" width="90%">
+</p>
+
+The preview uses the same Textual layout, colors and adaptive grid as the application.
 
 ## Highlights
 
@@ -110,7 +119,7 @@ Install the project with its development tools:
 
 ```bash
 python -m pip install -e .
-python -m pip install ruff basedpyright
+python -m pip install basedpyright pytest ruff
 ```
 
 Run the checks:
@@ -119,15 +128,22 @@ Run the checks:
 ruff check .
 ruff format --check .
 basedpyright
+pytest
 ```
+
+The pytest suite covers the adaptive grid calculation and configuration-file loading behavior. The same checks run automatically on pushes to `master` and on pull requests.
 
 Project layout:
 
 ```text
-src/menual/
-├── main.py           # Kitty and process launching
-├── menual.py         # Textual interface and adaptive layout
-└── menual_config.py  # ~/.menual.conf parsing
+.
+├── .github/workflows/ci.yml  # Automated quality checks
+├── assets/                   # Banner and interface screenshot
+├── src/menual/
+│   ├── main.py               # Kitty and process launching
+│   ├── menual.py             # Textual interface and adaptive layout
+│   └── menual_config.py      # ~/.menual.conf parsing
+└── tests/                    # Pytest suite
 ```
 
 ## Philosophy
