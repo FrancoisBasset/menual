@@ -48,8 +48,13 @@ typeCheckingMode = "basic"
 pythonVersion = "3.14"
 include = ["src", "tests"]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
 [dependency-groups]
 dev = [
     "basedpyright>=1.39.9",
+    "pytest",
     "ruff>=0.15.20",
 ]
