@@ -27,7 +27,7 @@ jobs:
       - name: Install project and development tools
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e . "ruff>=0.15.20" "basedpyright>=1.39.9"
+          python -m pip install -e . "ruff>=0.15.20" "basedpyright>=1.39.9" pytest
 
       - name: Lint
         run: ruff check .
@@ -39,4 +39,4 @@ jobs:
         run: basedpyright
 
       - name: Run tests
-        run: python -m unittest discover -s tests -v
+        run: pytest
