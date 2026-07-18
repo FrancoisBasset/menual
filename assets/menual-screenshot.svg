@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1068" height="587" viewBox="0 0 1068 587" role="img" aria-labelledby="title desc">
+  <title id="title">Menual application launcher screenshot</title>
+  <desc id="desc">The Menual Textual interface showing six colorful application buttons in a Kitty terminal window.</desc>
+
+  <rect x="1" y="1" width="1066" height="585" rx="9" fill="#292929" stroke="#8a8a8a"/>
+  <circle cx="26" cy="22" r="7" fill="#ff5f57"/>
+  <circle cx="48" cy="22" r="7" fill="#febc2e"/>
+  <circle cx="70" cy="22" r="7" fill="#28c840"/>
+  <text x="534" y="28" text-anchor="middle" fill="#c5c8c6" font-family="Arial, sans-serif" font-size="18" font-weight="700">Menual</text>
+
+  <rect x="9" y="42" width="1050" height="536" fill="#fffaf4"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="21" font-weight="700" fill="#18202d" text-anchor="middle">
+    <g transform="translate(33 67)">
+      <rect width="318" height="122" fill="#c8ec67"/>
+      <text x="159" y="68">Firefox</text>
+    </g>
+    <g transform="translate(363 67)">
+      <rect width="329" height="122" fill="#8be3ff"/>
+      <text x="164.5" y="68">Files</text>
+    </g>
+    <g transform="translate(704 67)">
+      <rect width="330" height="122" fill="#a6b8ff"/>
+      <text x="165" y="68">Code</text>
+    </g>
+
+    <g transform="translate(33 238)">
+      <rect width="318" height="122" fill="#f0a6ff"/>
+      <text x="159" y="68">Terminal</text>
+    </g>
+    <g transform="translate(363 238)">
+      <rect width="329" height="122" fill="#9ee493"/>
+      <text x="164.5" y="68">Music</text>
+    </g>
+    <g transform="translate(704 238)">
+      <rect width="330" height="122" fill="#ff8a9a"/>
+      <text x="165" y="68">System monitor</text>
+    </g>
+  </g>
+</svg>
