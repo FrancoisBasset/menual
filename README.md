@@ -119,7 +119,7 @@ Install the project with its development tools:
 
 ```bash
 python -m pip install -e .
-python -m pip install ruff basedpyright
+python -m pip install basedpyright pytest ruff
 ```
 
 Run the checks:
@@ -128,10 +128,10 @@ Run the checks:
 ruff check .
 ruff format --check .
 basedpyright
-python -m unittest discover -s tests -v
+pytest
 ```
 
-The test suite covers the adaptive grid calculation and configuration-file loading behavior. The same checks run automatically on pushes to `master` and on pull requests.
+The pytest suite covers the adaptive grid calculation and configuration-file loading behavior. The same checks run automatically on pushes to `master` and on pull requests.
 
 Project layout:
 
@@ -143,7 +143,7 @@ Project layout:
 │   ├── main.py               # Kitty and process launching
 │   ├── menual.py             # Textual interface and adaptive layout
 │   └── menual_config.py      # ~/.menual.conf parsing
-└── tests/                    # Unit tests
+└── tests/                    # Pytest suite
 ```
 
 ## Philosophy
