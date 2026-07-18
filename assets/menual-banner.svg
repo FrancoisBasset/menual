@@ -72,7 +72,7 @@
   </g>
 
   <g transform="translate(76 218)" font-family="ui-sans-serif, system-ui, sans-serif">
-    <text fill="#f8fafc" font-size="29" font-weight="760">A tiny launcher with a big personality.</text>
+    <text fill="#f8fafc" font-size="25" font-weight="760">A tiny launcher with a big personality.</text>
     <text y="48" fill="#aeb9cb" font-size="18">Fast. Colorful. Keyboard-friendly.</text>
 
     <g transform="translate(0 92)" font-size="15" font-weight="650">
